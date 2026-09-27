@@ -963,8 +963,8 @@ img {
 
 .footer__icon-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 29px;
+  right: 9px;
   width: 40px;
   height: 40px;
   border-radius: 20px;
