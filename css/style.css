@@ -107,11 +107,17 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-shrink: 0;
+}
+
+.nav__socials a {
+  flex-shrink: 0;
 }
 
 .nav__socials img {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
 }
 
 /* ---------- Hero ---------- */
@@ -237,13 +243,64 @@ img {
     font-size: 38px;
   }
 
-  .nav__links {
+  .nav {
+    top: 16px;
+    width: calc(100% - 24px);
+  }
+
+  .nav__inner {
+    height: 52px;
+    padding: 0 10px;
     gap: 8px;
+  }
+
+  .nav__logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav__links {
+    gap: 2px;
   }
 
   .nav__link {
     width: auto;
-    padding: 0 10px;
-    font-size: 15px;
+    height: 32px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .nav__link-bar {
+    top: -14px;
+    width: 18px;
+  }
+
+  .nav__socials {
+    gap: 10px;
+  }
+
+  .nav__socials img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .magic-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav__link {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+
+  .nav__links {
+    gap: 0;
   }
 }
