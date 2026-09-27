@@ -254,6 +254,9 @@ img {
   height: 80px;
   border-radius: 12px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brands__logo img {
@@ -263,29 +266,21 @@ img {
 
 .brands__logo--cover img {
   object-fit: cover;
+  object-position: center;
 }
 
 .brands__logo--contain img {
-  object-fit: contain;
-}
-
-.brands__logo--bottom img {
-  object-fit: contain;
-  object-position: bottom;
-}
-
-.brands__logo--center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brands__logo--center img {
   width: auto;
   height: auto;
-  max-width: 70%;
-  max-height: 60%;
+  max-width: 80%;
+  max-height: 70%;
   object-fit: contain;
+  object-position: center;
+}
+
+.brands__logo--full img {
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ---------- Skills ---------- */
@@ -301,11 +296,10 @@ img {
   font-weight: 600;
   font-size: 200px;
   line-height: 140px;
-  color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: transparent;
   text-align: center;
   white-space: nowrap;
-  -webkit-text-stroke: 1px #1a1a1a;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.16);
   margin-bottom: -60px;
 }
 
