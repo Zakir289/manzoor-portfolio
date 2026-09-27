@@ -861,16 +861,16 @@ img {
 
 .testimonial__quote {
   font-family: var(--font-alt);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 28px;
   line-height: 41px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 24px;
 }
 
 .testimonial__author {
   font-family: var(--font-alt);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   line-height: 41px;
   color: var(--color-white);
@@ -878,10 +878,10 @@ img {
 
 .testimonial__role {
   font-family: var(--font-alt);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 28px;
   line-height: 41px;
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ---------- CTA ---------- */
@@ -914,7 +914,6 @@ img {
 .magic-button__icon--connect {
   width: 24px;
   height: 16px;
-  transform: rotate(180deg) scaleY(-1);
 }
 
 /* ---------- Footer ---------- */
@@ -934,7 +933,8 @@ img {
 .footer__col {
   flex: 1 1 260px;
   position: relative;
-  padding-top: 24px;
+  margin-top: 8px;
+  padding-top: 36px;
   border-top: 1px solid #fffafa;
   display: flex;
   flex-direction: column;
