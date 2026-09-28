@@ -268,26 +268,11 @@ img {
 }
 
 .brands__logo img {
-  width: 100%;
-  height: 100%;
-}
-
-.brands__logo--cover img {
-  object-fit: cover;
-  object-position: center;
-}
-
-.brands__logo--contain img {
   width: auto;
   height: auto;
-  max-width: 80%;
-  max-height: 70%;
+  max-width: 75%;
+  max-height: 55%;
   object-fit: contain;
-  object-position: center;
-}
-
-.brands__logo--full img {
-  object-fit: cover;
   object-position: center;
 }
 
@@ -300,7 +285,7 @@ img {
 }
 
 .skills__watermark {
-  font-family: var(--font-body);
+  font-family: var(--font-alt);
   font-weight: 600;
   font-size: 200px;
   line-height: 140px;
@@ -665,6 +650,33 @@ img {
   object-fit: cover;
 }
 
+/* Hover reveal: black blurred shadow + lift on every bordered skill shape */
+.skill__box,
+.skill__visual-icon-box,
+.skill__interaction-accent,
+.skill__wire-box,
+.skill__flow-pill,
+.skill__flow-oval,
+.skill__search-icon,
+.skill__mark,
+.skill__proto-bracket,
+.skill__experience-icon {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.skill:hover .skill__box,
+.skill:hover .skill__visual-icon-box,
+.skill:hover .skill__interaction-accent,
+.skill:hover .skill__wire-box,
+.skill:hover .skill__flow-pill,
+.skill:hover .skill__flow-oval,
+.skill:hover .skill__search-icon,
+.skill:hover .skill__proto-bracket,
+.skill:hover .skill__experience-icon {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 18px rgba(255, 225, 65, 0.35);
+  transform: translateY(-3px);
+}
+
 /* ---------- Works ---------- */
 
 .works {
@@ -675,7 +687,7 @@ img {
 }
 
 .works__watermark {
-  font-family: var(--font-body);
+  font-family: var(--font-alt);
   font-weight: 600;
   font-size: 200px;
   line-height: 140px;
@@ -839,7 +851,7 @@ img {
 }
 
 .testimonials__watermark {
-  font-family: var(--font-body);
+  font-family: var(--font-alt);
   font-weight: 600;
   font-size: 120px;
   line-height: 140px;
@@ -871,8 +883,8 @@ img {
 .testimonial__quote {
   font-family: var(--font-alt);
   font-weight: 400;
-  font-size: 28px;
-  line-height: 41px;
+  font-size: 24px;
+  line-height: 35px;
   color: rgba(255, 255, 255, 0.55);
   margin-bottom: 24px;
 }
@@ -880,16 +892,16 @@ img {
 .testimonial__author {
   font-family: var(--font-alt);
   font-weight: 600;
-  font-size: 28px;
-  line-height: 41px;
+  font-size: 24px;
+  line-height: 35px;
   color: var(--color-white);
 }
 
 .testimonial__role {
   font-family: var(--font-alt);
   font-weight: 400;
-  font-size: 28px;
-  line-height: 41px;
+  font-size: 24px;
+  line-height: 35px;
   color: rgba(255, 255, 255, 0.8);
 }
 
