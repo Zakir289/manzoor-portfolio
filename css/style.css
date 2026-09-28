@@ -1245,6 +1245,7 @@ img {
 }
 
 .exp-card__avatar {
+  position: relative;
   width: 66px;
   height: 66px;
   border-radius: 50%;
@@ -1252,6 +1253,19 @@ img {
   padding: 4px;
   box-sizing: border-box;
   flex-shrink: 0;
+}
+
+.exp-card:not(.exp-card--timeline) .exp-card__avatar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 56px;
+  margin-top: 4px;
+  background: #d9d9d9;
+  border-radius: 14px;
 }
 
 .exp-card__avatar img {
@@ -1347,7 +1361,7 @@ img {
 .exp-card--timeline .exp-card__roles::before {
   content: "";
   position: absolute;
-  left: -57px;
+  left: -54px;
   top: 8px;
   bottom: 8px;
   width: 4px;
@@ -1358,7 +1372,7 @@ img {
 .exp-card--timeline .exp-role::before {
   content: "";
   position: absolute;
-  left: -61px;
+  left: -58px;
   top: 4px;
   width: 12px;
   height: 12px;
