@@ -96,7 +96,7 @@ img {
 
 .nav__link-bar {
   position: absolute;
-  top: -22px;
+  top: 0;
   width: 27px;
   height: 2px;
   border-radius: 20px 20px 0 0;
@@ -107,7 +107,7 @@ img {
 .nav__socials {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   flex-shrink: 0;
 }
 
@@ -124,13 +124,11 @@ img {
 /* ---------- Hero ---------- */
 
 .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 160px 24px 80px;
+  padding: 160px 24px 0;
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -214,11 +212,19 @@ img {
   font-weight: 600;
   font-size: 16px;
   white-space: nowrap;
-  transition: transform 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .magic-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 225, 65, 0.35);
+  background: var(--color-accent);
+}
+
+.magic-button:active {
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 225, 65, 0.3);
 }
 
 .magic-button__icon {
@@ -229,7 +235,8 @@ img {
 /* ---------- Brands ---------- */
 
 .brands {
-  padding: 60px 24px 40px;
+  margin-top: 120px;
+  padding: 0 24px;
   text-align: center;
 }
 
@@ -288,7 +295,7 @@ img {
 
 .skills {
   position: relative;
-  padding-top: 40px;
+  margin-top: 120px;
   overflow: hidden;
 }
 
@@ -662,7 +669,8 @@ img {
 
 .works {
   position: relative;
-  padding: 40px 190px 120px;
+  margin-top: 120px;
+  padding: 0 190px;
   overflow: hidden;
 }
 
@@ -825,7 +833,8 @@ img {
 
 .testimonials {
   position: relative;
-  padding: 40px 190px 80px;
+  margin-top: 120px;
+  padding: 0 190px;
   overflow: hidden;
 }
 
@@ -891,7 +900,8 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 64px;
-  padding: 80px 24px 120px;
+  margin-top: 120px;
+  padding: 0 24px;
   text-align: center;
 }
 
@@ -920,7 +930,7 @@ img {
 
 .footer {
   max-width: 1312px;
-  margin: 0 auto;
+  margin: 120px auto 0;
   padding: 0 24px 40px;
 }
 
