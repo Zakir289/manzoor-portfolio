@@ -18,7 +18,40 @@
 </div>
 
 <div class="site">
-<div id="nav-placeholder" data-active="home"></div>
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html#home" class="nav__logo">
+      <img src="assets/icons/logo.svg" alt="Manzoor Elahi logo">
+    </a>
+
+    <nav class="nav__links">
+      <a href="index.html#home" class="nav__link nav__link--active" data-nav="home">
+        <span class="nav__link-bar"></span>
+        HOME
+      </a>
+      <a href="index.html#work" class="nav__link" data-nav="work">
+        <span class="nav__link-bar"></span>
+        WORK
+      </a>
+      <a href="about.html" class="nav__link" data-nav="about">
+        <span class="nav__link-bar"></span>
+        About
+      </a>
+    </nav>
+
+    <div class="nav__socials">
+      <a href="https://www.linkedin.com/in/manzoorelahiks" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="">
+      </a>
+      <a href="mailto:manzoor.ksm@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+        <img src="assets/icons/mail.svg" alt="">
+      </a>
+      <a href="https://www.instagram.com/manzoor.designs/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="assets/icons/instagram.svg" alt="">
+      </a>
+    </div>
+  </div>
+</header>
 
 <main>
   <section class="hero" id="home">
@@ -349,6 +382,5 @@
 </main>
 </div>
 
-<script src="js/nav-loader.js"></script>
 </body>
 </html>
