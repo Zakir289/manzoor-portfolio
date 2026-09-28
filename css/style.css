@@ -1378,7 +1378,7 @@ img {
 .exp-card--timeline .exp-card__roles::before {
   content: "";
   position: absolute;
-  left: -59px;
+  left: -57px;
   top: 8px;
   bottom: 8px;
   width: 4px;
