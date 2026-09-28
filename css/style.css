@@ -8,6 +8,8 @@
   --font-display: 'Syne', sans-serif;
   --font-body: 'Quicksand', sans-serif;
   --font-alt: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
 }
 
 * {
@@ -95,6 +97,7 @@ img {
 }
 
 .nav__link-bar {
+  display: none;
   position: absolute;
   top: 0;
   width: 27px;
@@ -102,6 +105,15 @@ img {
   border-radius: 20px 20px 0 0;
   background: var(--color-white);
   box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.25);
+}
+
+.nav__link--active .nav__link-bar {
+  display: block;
+}
+
+.nav__link--active {
+  background: rgba(96, 96, 96, 0.2);
+  border-radius: 20px;
 }
 
 .nav__socials {
@@ -1023,6 +1035,179 @@ img {
   font-weight: 500;
   font-size: 14px;
   color: #959595;
+}
+
+/* ---------- About Hero ---------- */
+
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 160px 96px 80px;
+}
+
+.about-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-hero__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-hero__greeting {
+  font-family: var(--font-jakarta);
+  font-weight: 700;
+  font-size: 24px;
+  color: #fffafa;
+}
+
+.about-hero__name {
+  font-family: var(--font-jakarta);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-accent);
+  margin-top: 16px;
+}
+
+.about-hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 1.05;
+  color: var(--color-white);
+  margin-top: 56px;
+}
+
+.about-hero__resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 296px;
+  height: 56px;
+  margin-top: 56px;
+  background: var(--color-white);
+  color: #000000;
+  border-radius: 28px;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.about-hero__resume-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 225, 65, 0.35);
+  background: var(--color-accent);
+}
+
+.about-hero__resume-btn:active {
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 225, 65, 0.3);
+}
+
+.about-hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 542px;
+  height: 542px;
+  flex-shrink: 0;
+}
+
+.about-hero__photo-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.about-hero__photo-squiggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-hero__photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 8px solid var(--color-white);
+  border-radius: 50%;
+  object-fit: cover;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+/* ---------- About Me ---------- */
+
+.about-me {
+  margin-top: 120px;
+  padding-bottom: 120px;
+}
+
+.about-me__label {
+  max-width: 632px;
+  margin: 0 0 64px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-me__label-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ccd2e1;
+}
+
+.about-me__label-heading {
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--color-white);
+}
+
+.about-me__content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-me__content p {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 56px;
+  color: var(--color-subtext);
+}
+
+.about-me__content .hl {
+  color: var(--color-white);
 }
 
 /* ---------- Responsive ---------- */
