@@ -863,6 +863,11 @@ img {
   overflow: hidden;
 }
 
+.testimonials--plain {
+  padding: 0 64px;
+  overflow: visible;
+}
+
 .testimonials__watermark {
   font-family: var(--font-alt);
   font-weight: 600;
@@ -1164,7 +1169,6 @@ img {
 
 .about-me {
   margin-top: 120px;
-  padding-bottom: 120px;
 }
 
 .section-label {
@@ -1214,7 +1218,7 @@ img {
 
 .experience {
   margin-top: 120px;
-  padding: 0 64px 120px;
+  padding: 0 64px;
 }
 
 .exp-list {
@@ -1398,7 +1402,7 @@ img {
 
 .hobbies {
   margin-top: 120px;
-  padding: 0 64px 120px;
+  padding: 0 64px;
 }
 
 .hobbies-grid {
