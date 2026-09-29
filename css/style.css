@@ -10,6 +10,7 @@
   --font-alt: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-jura: 'Jura', sans-serif;
 }
 
 * {
@@ -1506,6 +1507,236 @@ img {
 .scroll-top img {
   width: 22px;
   height: 22px;
+}
+
+/* ---------- Case Study Hero ---------- */
+
+.case-hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 160px 64px 0;
+}
+
+.case-hero__media {
+  width: 100%;
+  height: 615px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.case-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-hero__headline {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.case-hero__headline-row {
+  font-family: var(--font-jura);
+  font-weight: 400;
+  font-size: 106px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.case-hero__headline-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 106px;
+  margin: 0 8px;
+  padding: 0 29px 0 30px;
+  border-radius: 53px;
+  background: #dae0f1;
+  font-family: var(--font-jura);
+  font-weight: 500;
+  font-size: 76px;
+  color: #000000;
+  vertical-align: middle;
+}
+
+.case-hero__details {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  max-width: 1248px;
+  margin: 120px auto 0;
+}
+
+.case-hero__col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 540px;
+}
+
+.case-hero__label {
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--color-white);
+}
+
+.case-hero__label--spaced {
+  margin-top: 16px;
+}
+
+.case-hero__text p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.case-flow {
+  display: flex;
+  gap: 24px;
+  max-width: 1248px;
+  margin: 120px auto 120px;
+}
+
+.case-flow__pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 294px;
+  height: 161px;
+  border-radius: 80.5px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.case-flow__pill--1,
+.case-flow__pill--2 {
+  background: #364357;
+}
+
+.case-flow__pill--3 {
+  background: #5e628b;
+}
+
+.case-flow__pill--4 {
+  background: #152a4b;
+}
+
+/* ---------- 6-step Process ---------- */
+
+.process {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px 120px;
+}
+
+.process__heading {
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--color-white);
+  margin-bottom: 80px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.process-tile {
+  position: relative;
+  height: 320px;
+  border-radius: 18px;
+  background: #101419;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.process-tile--image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.process-tile--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.process-tile__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.process-tile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #18202a;
+  flex-shrink: 0;
+}
+
+.process-tile__icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.process-tile__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 21px;
+  border-radius: 16px;
+  background: #dae0f1;
+  font-family: var(--font-alt);
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.process-tile__body {
+  margin-top: 24px;
+}
+
+.process-tile__body p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-white);
+  margin: 0 0 4px;
+}
+
+.process-tile__body ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.process-tile__body li {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-white);
 }
 
 /* ---------- Responsive ---------- */
