@@ -1535,7 +1535,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   text-align: center;
 }
 
@@ -1565,10 +1565,11 @@ img {
 
 .case-hero__details {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 120px;
+  gap: 168px;
   max-width: 1248px;
-  margin: 120px auto 0;
+  margin: 96px auto 0;
 }
 
 .case-hero__col {
@@ -1576,6 +1577,10 @@ img {
   flex-direction: column;
   gap: 16px;
   width: 540px;
+}
+
+.case-hero__col:nth-child(2) {
+  margin-top: 192px;
 }
 
 .case-hero__label {
@@ -1638,7 +1643,7 @@ img {
 .process {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 64px 120px;
+  padding: 0 64px;
 }
 
 .process__heading {
@@ -1657,7 +1662,7 @@ img {
 
 .process-tile {
   position: relative;
-  height: 320px;
+  min-height: 320px;
   border-radius: 18px;
   background: #101419;
   padding: 16px;
@@ -2281,7 +2286,8 @@ img {
 
 .persona-card {
   display: flex;
-  gap: 64px;
+  align-items: center;
+  gap: 48px;
   background: #101419;
   border-radius: 28px;
   padding: 48px;
@@ -2310,6 +2316,10 @@ img {
   gap: 24px;
   width: 420px;
   flex-shrink: 0;
+}
+
+.persona-card__extra {
+  margin-left: 16px;
 }
 
 .persona-card__name {
