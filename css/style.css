@@ -319,7 +319,7 @@ img {
   color: transparent;
   text-align: center;
   white-space: nowrap;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.16);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
   position: relative;
   height: 236px;
   padding-top: 48px;
@@ -735,7 +735,7 @@ img {
   color: transparent;
   text-align: center;
   white-space: nowrap;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.16);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
   height: 236px;
   padding-top: 48px;
   position: relative;
@@ -946,7 +946,7 @@ img {
   line-height: 140px;
   color: transparent;
   text-align: center;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.16);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
   margin-bottom: -40px;
   position: relative;
   z-index: 0;
@@ -992,6 +992,193 @@ img {
   font-size: 24px;
   line-height: 35px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Reviews (auto-scrolling) ---------- */
+
+.reviews {
+  position: relative;
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+.reviews__watermark {
+  position: relative;
+  height: 299px;
+  font-family: var(--font-alt);
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 140px;
+  color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
+  margin-bottom: 32px;
+}
+
+.reviews__watermark::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 0;
+  width: 100%;
+  height: 205px;
+  background: linear-gradient(178.757deg, rgba(0, 0, 0, 0) 7.5875%, #000000 94.392%);
+}
+
+.reviews__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 236px, #000 calc(100% - 247px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 236px, #000 calc(100% - 247px), transparent 100%);
+}
+
+.reviews__track {
+  display: flex;
+  width: max-content;
+  padding-left: 254px;
+  animation: reviews-scroll 60s linear infinite;
+  animation-play-state: paused;
+}
+
+.reviews.is-inview .reviews__track {
+  animation-play-state: running;
+}
+
+.reviews__viewport:hover .reviews__track {
+  animation-play-state: paused;
+}
+
+@keyframes reviews-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-2940px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews__track {
+    animation: none;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+  width: 932px;
+  height: 495px;
+  margin-right: 48px;
+  padding: 39px 39px 40px;
+  background: #141414;
+  border: 1px solid rgba(234, 234, 234, 0.2);
+  border-radius: 36px;
+  transition: border-color 0.2s ease;
+}
+
+.review:hover {
+  border-color: rgba(255, 225, 65, 0.5);
+}
+
+.review__quote {
+  min-height: 246px;
+  margin-right: -4px;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 41px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.review__more {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #21a8f2;
+}
+
+.review__chips {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.review__chip {
+  padding: 7.44px 14.881px;
+  border-radius: 12px;
+  background: #f1f2fc;
+  font-family: 'Nunito', var(--font-body);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23.81px;
+  color: #575b88;
+  white-space: nowrap;
+}
+
+.review__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review__person {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.review__avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.review__who {
+  width: 350px;
+}
+
+.review__name {
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 41px;
+  color: var(--color-white);
+}
+
+.review__role {
+  font-family: var(--font-alt);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 41px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.review__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.review__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review__logo--r12 {
+  border-radius: 12px;
+}
+
+.review__logo--white {
+  background: #ffffff;
+}
+
+.review__logo--white img {
+  width: 58px;
+  height: 58px;
 }
 
 /* ---------- CTA ---------- */
